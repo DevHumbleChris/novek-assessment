@@ -27,7 +27,7 @@ export default function SignupForm() {
 
             const user = res ? JSON.parse(res) as User : null
 
-            if (user?.email) {
+            if (user?.email === data.email) {
                 return toast.error('Email already exists')
             }
 
