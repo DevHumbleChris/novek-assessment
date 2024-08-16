@@ -28,6 +28,8 @@ export default function NewFreight() {
     const nextStep = () => {
         setActiveStep(activeStep + 1)
     }
+
+    console.log(formData)
     return (
         <section className="relative">
             <div className="grid grid-cols-1 sm:grid-cols-5 min-h-screen bg-[#f1f2f5]">
@@ -64,7 +66,7 @@ export default function NewFreight() {
                         }
                         {
                             activeStep === 1 && (
-                                <FreightDetails setFormData={setFormData} formData={formData} />
+                                <FreightDetails />
                             )
                         }
                     </div>
